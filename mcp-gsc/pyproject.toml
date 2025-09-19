@@ -1,0 +1,18 @@
+[project]
+name = "mcp-gsc"
+version = "0.1.0"
+description = "MCP server for Google Search Console API integration with ChatGPT"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "google-api-python-client>=2.163.0",
+    "google-auth-httplib2>=0.2.0",
+    "google-auth-oauthlib>=1.2.1",
+    "mcp[cli]>=1.3.0",
+]
+
+[project.scripts]
+mcp-gsc = "mcp_gsc.main:main"
+
+[tool.uv]
+dev-dependencies = []
