@@ -31,9 +31,21 @@ This is a MCP (Machine Callable Program) server for interacting with Google Sear
 ## Usage
 
 Run the server:
+
 ```
-python gsc_server.py
+python -m mcp_gsc.main
 ```
 
-The server provides the following tools:
-- `list_properties`: Lists all Search Console properties accessible to the service account 
+The server exposes several MCP tools, including:
+
+- `list_properties`: List Search Console properties accessible to the configured credentials.
+- `delete_site`: Remove a Search Console property from the authenticated account.
+- `get_search_analytics`: Retrieve performance metrics with configurable dimensions and lookback windows.
+- `get_site_details`: Display metadata and verification status for a property.
+- `get_sitemaps`: Summarize submitted sitemaps and their statuses.
+- `inspect_url_enhanced`: Run the Search Console URL Inspection API for a specific page.
+- `batch_url_inspection`: Inspect up to 10 URLs at once for quick diagnostics.
+- `manage_sitemaps`: Submit, remove, or review sitemap information.
+- `connector_search`: Search entry point required by ChatGPT connectors.
+- `connector_fetch`: Fetch entry point required by ChatGPT connectors.
+- `get_creator_info`: Basic information about the tool author.
